@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Veja como a EloEsportes funciona para jogadores, organizadores e locais esportivos." />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Como funciona | EloEsportes</title>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <img src="assets/icons/logo.svg" alt="" />
+          EloEsportes
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+        </button>
+
+        <nav class="menu-principal" aria-label="Menu principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="como-funciona.html" class="active" aria-current="page">Como funciona</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-alt">
+        <div class="container">
+          <h1>Como funciona</h1>
+          <p>Escolha o seu perfil e veja o passo a passo na EloEsportes.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>A jornada de cada perfil</h2>
+          <p class="subtitle">Clique em um perfil para ver o passo a passo.</p>
+
+          <div class="abas-botoes" role="tablist" aria-label="Perfis">
+            <button class="aba-botao ativa" type="button" role="tab" aria-selected="true" data-aba="aba-jogador">Sou jogador</button>
+            <button class="aba-botao" type="button" role="tab" aria-selected="false" data-aba="aba-organizador">Sou organizador</button>
+            <button class="aba-botao" type="button" role="tab" aria-selected="false" data-aba="aba-local">Tenho uma quadra</button>
+          </div>
+
+          <div class="card aba-painel ativa" id="aba-jogador" role="tabpanel">
+            <h3>Para o jogador</h3>
+            <ol class="jornada">
+              <li><span class="passo">1</span> Faz o cadastro com nome, e-mail, telefone, modalidade e nível.</li>
+              <li><span class="passo">2</span> Escolhe a região e a modalidade que quer jogar.</li>
+              <li><span class="passo">3</span> Vê os eventos com nível, data, vagas e situação.</li>
+              <li><span class="passo">4</span> Se inscreve em um evento ativo do seu nível e acompanha em "Minhas inscrições".</li>
+            </ol>
+          </div>
+
+          <div class="card aba-painel" id="aba-organizador" role="tabpanel">
+            <h3>Para o organizador de eventos</h3>
+            <ol class="jornada">
+              <li><span class="passo">1</span> Cadastra o evento com nome, região, modalidade, data e nível exigido.</li>
+              <li><span class="passo">2</span> Define a quantidade de vagas.</li>
+              <li><span class="passo">3</span> Acompanha as inscrições e as vagas restantes.</li>
+              <li><span class="passo">4</span> Avisa os inscritos caso o evento seja cancelado.</li>
+            </ol>
+          </div>
+
+          <div class="card aba-painel" id="aba-local" role="tabpanel">
+            <h3>Para quadras, clubes e centros esportivos</h3>
+            <ol class="jornada">
+              <li><span class="passo">1</span> Cadastra o local e as modalidades que ele recebe.</li>
+              <li><span class="passo">2</span> Divulga os eventos que acontecem no espaço.</li>
+              <li><span class="passo">3</span> Recebe jogadores que já conhecem o nível do evento.</li>
+              <li><span class="passo">4</span> Ocupa melhor os horários livres da quadra.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Os três níveis</h2>
+          <p class="subtitle">Você só se inscreve em eventos do seu nível ou abaixo dele.</p>
+
+          <div class="linha">
+            <article class="card col-3">
+              <span class="passo">1</span>
+              <h3>Iniciante</h3>
+              <p>Para quem está começando ou joga só de vez em quando.</p>
+            </article>
+            <article class="card col-3">
+              <span class="passo">2</span>
+              <h3>Intermediário</h3>
+              <p>Para quem joga com frequência e conhece as regras e posições.</p>
+            </article>
+            <article class="card col-3">
+              <span class="passo">3</span>
+              <h3>Avançado</h3>
+              <p>Para quem já disputa campeonatos e treina com regularidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <h2>Organiza eventos ou tem uma quadra?</h2>
+              <p>Fale com a gente para divulgar os seus eventos na EloEsportes.</p>
+            </div>
+            <a href="contato.html" class="btn btn-primary">Fale com a gente</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <p class="footer-title">EloEsportes</p>
+            <p>
+              Encontre lugares e eventos para jogar perto de você. Projeto
+              acadêmico da Global Solution FIAP 2026, desenvolvido pela equipe
+              NextLevel.
+            </p>
+          </div>
+
+          <nav aria-label="Links do rodapé" class="footer-nav">
+            <div>
+              <p class="footer-title">Navegação</p>
+              <ul class="footer-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer-title">Nossa solução</p>
+              <ul class="footer-links">
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <p class="footer-bottom">
+          &copy; 2026 NextLevel &ndash; Global Solution FIAP &middot; CitizenTech
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

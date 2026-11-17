@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encontre eventos esportivos por região e modalidade e faça sua inscrição de acordo com o seu nível." />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Eventos | EloEsportes</title>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <img src="assets/icons/logo.svg" alt="" />
+          EloEsportes
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+          <span class="menu-toggle-barra"></span>
+        </button>
+
+        <nav class="menu-principal" aria-label="Menu principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="eventos.html" class="active" aria-current="page">Eventos</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-alt">
+        <div class="container">
+          <h1>Eventos</h1>
+          <p>Escolha a região e a modalidade, informe o seu nível e inscreva-se nos eventos com vagas.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Encontre um evento</h2>
+          <p class="subtitle">Filtre por região e modalidade e informe o seu nível para se inscrever.</p>
+
+          <form class="filtro" aria-label="Filtrar eventos">
+            <div class="form-group">
+              <label for="filtro-regiao">Região</label>
+              <select id="filtro-regiao" name="regiao">
+                <option value="todas">Todas</option>
+                <option value="sao-paulo">São Paulo</option>
+                <option value="osasco">Osasco</option>
+                <option value="guarulhos">Guarulhos</option>
+                <option value="campinas">Campinas</option>
+                <option value="sao-bernardo">São Bernardo do Campo</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filtro-modalidade">Modalidade</label>
+              <select id="filtro-modalidade" name="modalidade">
+                <option value="todas">Todas</option>
+                <option value="futebol">Futebol</option>
+                <option value="basquete">Basquete</option>
+                <option value="volei">Vôlei</option>
+                <option value="tenis">Tênis</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="nivel-usuario">Seu nível</label>
+              <select id="nivel-usuario" name="nivel">
+                <option value="">Selecione</option>
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+            </div>
+
+            <p class="contador" id="contador" aria-live="polite">28 evento(s) encontrado(s)</p>
+          </form>
+
+          <p class="sem-resultado escondido" id="sem-resultado">
+            Nenhum evento encontrado com esses filtros. Tente outra região ou modalidade.
+          </p>
+
+          <div class="linha">
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="futebol" data-nivel="iniciante">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>20/10/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="futebol" data-nivel="intermediario">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Copa São Paulo de Futebol Amador</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>15/12/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="futebol" data-nivel="avancado">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Torneio Metropolitano de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>10/02/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Avançado</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="basquete" data-nivel="iniciante">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Campeonato Municipal de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>25/11/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="basquete" data-nivel="intermediario">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-encerrado">Encerrado</span>
+              <h3>Copa Paulista de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>15/09/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="basquete" data-nivel="avancado">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Torneio Metropolitano de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>20/03/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Avançado</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">15</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="tenis" data-nivel="iniciante">
+              <span class="tag">Tênis</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Torneio Municipal de Tênis</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>12/01/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="tenis" data-nivel="intermediario">
+              <span class="tag">Tênis</span>
+              <span class="situacao situacao-encerrado">Encerrado</span>
+              <h3>Copa Paulista de Tênis</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>05/10/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">15</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="tenis" data-nivel="avancado">
+              <span class="tag">Tênis</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Circuito Metropolitano de Tênis</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>18/04/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Avançado</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">10</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="volei" data-nivel="iniciante">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>05/12/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="volei" data-nivel="intermediario">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa Paulista de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>20/08/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-paulo" data-modalidade="volei" data-nivel="avancado">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Torneio Metropolitano de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Paulo</dd>
+                <dt>Data</dt>
+                <dd>10/05/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Avançado</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="osasco" data-modalidade="futebol" data-nivel="iniciante">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Osasco</dd>
+                <dt>Data</dt>
+                <dd>30/11/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="osasco" data-modalidade="futebol" data-nivel="intermediario">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa Osasco de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Osasco</dd>
+                <dt>Data</dt>
+                <dd>10/09/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="osasco" data-modalidade="basquete" data-nivel="iniciante">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Osasco</dd>
+                <dt>Data</dt>
+                <dd>15/02/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="osasco" data-modalidade="basquete" data-nivel="intermediario">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa Osasco de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Osasco</dd>
+                <dt>Data</dt>
+                <dd>20/12/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="guarulhos" data-modalidade="futebol" data-nivel="iniciante">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-encerrado">Encerrado</span>
+              <h3>Campeonato Municipal de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Guarulhos</dd>
+                <dt>Data</dt>
+                <dd>15/07/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="guarulhos" data-modalidade="futebol" data-nivel="intermediario">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa Guarulhos de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Guarulhos</dd>
+                <dt>Data</dt>
+                <dd>25/01/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="guarulhos" data-modalidade="volei" data-nivel="iniciante">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Guarulhos</dd>
+                <dt>Data</dt>
+                <dd>10/12/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="guarulhos" data-modalidade="volei" data-nivel="intermediario">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Copa Guarulhos de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Guarulhos</dd>
+                <dt>Data</dt>
+                <dd>05/03/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="campinas" data-modalidade="futebol" data-nivel="iniciante">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Campinas</dd>
+                <dt>Data</dt>
+                <dd>12/10/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="campinas" data-modalidade="futebol" data-nivel="intermediario">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Copa Campinas de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Campinas</dd>
+                <dt>Data</dt>
+                <dd>28/02/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="campinas" data-modalidade="basquete" data-nivel="iniciante">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Campeonato Municipal de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Campinas</dd>
+                <dt>Data</dt>
+                <dd>18/12/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="campinas" data-modalidade="basquete" data-nivel="intermediario">
+              <span class="tag">Basquete</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa Campinas de Basquete</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>Campinas</dd>
+                <dt>Data</dt>
+                <dd>08/04/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-bernardo" data-modalidade="futebol" data-nivel="iniciante">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Bernardo do Campo</dd>
+                <dt>Data</dt>
+                <dd>28/11/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">30</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-bernardo" data-modalidade="futebol" data-nivel="intermediario">
+              <span class="tag">Futebol</span>
+              <span class="situacao situacao-ativo">Ativo</span>
+              <h3>Copa São Bernardo de Futebol</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Bernardo do Campo</dd>
+                <dt>Data</dt>
+                <dd>15/01/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary btn-inscrever">Inscrever-se</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-bernardo" data-modalidade="volei" data-nivel="iniciante">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Campeonato Municipal de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Bernardo do Campo</dd>
+                <dt>Data</dt>
+                <dd>30/08/2026</dd>
+                <dt>Nível exigido</dt>
+                <dd>Iniciante</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">25</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+
+            <article class="card col-3 evento" data-regiao="sao-bernardo" data-modalidade="volei" data-nivel="intermediario">
+              <span class="tag">Vôlei</span>
+              <span class="situacao situacao-cancelado">Cancelado</span>
+              <h3>Copa São Bernardo de Vôlei</h3>
+              <dl>
+                <dt>Local</dt>
+                <dd>São Bernardo do Campo</dd>
+                <dt>Data</dt>
+                <dd>12/03/2027</dd>
+                <dt>Nível exigido</dt>
+                <dd>Intermediário</dd>
+                <dt>Vagas</dt>
+                <dd class="vagas">20</dd>
+              </dl>
+              <div class="flex">
+                <button type="button" class="btn btn-primary" disabled>Inscrições fechadas</button>
+              </div>
+              <p class="aviso" aria-live="polite"></p>
+            </article>
+          </div>
+
+          <p class="nota">
+            Os eventos desta página são exemplos do protótipo. Você só pode se
+            inscrever em eventos ativos e do seu nível ou abaixo dele.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <p class="footer-title">EloEsportes</p>
+            <p>
+              Encontre lugares e eventos para jogar perto de você. Projeto
+              acadêmico da Global Solution FIAP 2026, desenvolvido pela equipe
+              NextLevel.
+            </p>
+          </div>
+
+          <nav aria-label="Links do rodapé" class="footer-nav">
+            <div>
+              <p class="footer-title">Navegação</p>
+              <ul class="footer-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer-title">Nossa solução</p>
+              <ul class="footer-links">
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <p class="footer-bottom">
+          &copy; 2026 NextLevel &ndash; Global Solution FIAP &middot; CitizenTech
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
