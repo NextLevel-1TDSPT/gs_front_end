@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  📁 <a href="LINK_DO_REPOSITORIO"><strong>Repositório no GitHub</strong></a>
+  📁 <a href="https://github.com/NextLevel-1TDSPT/gs_front_end"><strong>Repositório no GitHub</strong></a>
 </p>
 
 ---
